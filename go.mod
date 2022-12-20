@@ -164,3 +164,5 @@ require (
 )
 
 go 1.18
+
+replace github.com/aliyun/fc-go-sdk => github.com/rhysmdnz/fc-go-sdk v0.0.0-20230508064220-d582675ebbfa
