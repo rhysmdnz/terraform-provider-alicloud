@@ -51,3 +51,5 @@ require (
 )
 
 go 1.13
+
+replace github.com/aliyun/fc-go-sdk => github.com/rhysmdnz/fc-go-sdk v0.0.0-20221220034254-3c10a6a12288

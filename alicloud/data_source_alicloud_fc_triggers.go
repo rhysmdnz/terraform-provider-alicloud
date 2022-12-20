@@ -73,6 +73,14 @@ func dataSourceAlicloudFcTriggers() *schema.Resource {
 							Type:     schema.TypeString,
 							Computed: true,
 						},
+						"url_internet": {
+							Type:     schema.TypeString,
+							Computed: true,
+						},
+						"url_intranet": {
+							Type:     schema.TypeString,
+							Computed: true,
+						},
 						"creation_time": {
 							Type:     schema.TypeString,
 							Computed: true,
@@ -142,6 +150,8 @@ func dataSourceAlicloudFcTriggersRead(d *schema.ResourceData, meta interface{}) 
 				"name":                   *trigger.TriggerName,
 				"source_arn":             sourceARN,
 				"type":                   *trigger.TriggerType,
+				"url_internet":           *trigger.URLInternet,
+				"url_intranet":           *trigger.URLIntranet,
 				"invocation_role":        invocationRole,
 				"config":                 string(trigger.RawTriggerConfig),
 				"creation_time":          *trigger.CreatedTime,
